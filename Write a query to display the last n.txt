@@ -1,0 +1,37 @@
+ Write a query to display the last name, department number, and department name for all employees
+
+select  e.last_name , e.department_id, d.department_name from employees e join departments d on e.department_id=d.department_id;
+
+ Create a unique listing of all jobs that are in department 80. Include the location of the department in the output.
+
+select distinct e.job_id, e.job_title, d.department_name, l.location_name from employees e join departments d on e.department_id = d.department_id join locations l on d.location_id = l.location_id where d.department_id = 80;
+
+Display the employee last name and department name for all employees who have an a (lowercase) in their last names
+
+select e.last_name, d.department_name from employees e join departments d on e.department_id = d.department_id where e.last_name like '%a%';
+
+Display the last name, job, department number, and department name for all  employees who work in Toronto.
+
+
+select e.last_name, e.job_id, e.department_id, d.department_name from employees e join departments d on e.department_id = d.department_id join locations l on d.location_id = l.location_id where l.city = 'toronto';
+
+Display the employee last name and employee number along with their manager’s last name and   manager number. Label the columns Employee, Emp#, Manager, and Mgr#, respectively.
+
+select e.last_name as employee, e.employee_id as emp#, m.last_name as manager, m.employee_id as mgr# from employees e join employees m on e.manager_id = m.employee_id;
+
+Display all employees including King, who has no manager. Order the results by the employee number
+
+
+
+
+Create a query that displays employee last names, department numbers, and all the employees who work in the same department as a given employee. Give each column an appropriate label.
+
+select e1.last_name as "last name", e1.department_id as "department id" from employees e1 join employees e2 on e1.department_id = e2.department_id order by e1.last_name;
+
+
+
+
+
+
+
+

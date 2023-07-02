@@ -1,0 +1,6 @@
+All Query links:
+https://docs.google.com/document/d/1lgcdabcL84oNKfOn6uPrnXGbgt0CnLeNOQLYJLNRMXo/edit
+
+
+https://www.prisma.io/dataguide/postgresql/date-types
+https://www.commandprompt.com/education/postgresql-date-data-type-with-examples/
